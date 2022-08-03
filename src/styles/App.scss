@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "colors";
+@import "animations";
+@import "fonts";
+
+.App {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+  height: 100vh;
+}
+
+header{
+  position: absolute;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

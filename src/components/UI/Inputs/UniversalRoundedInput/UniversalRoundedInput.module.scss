@@ -1,0 +1,52 @@
+@import '../../../../styles/colors.scss';
+
+.formGroup{
+  position: relative;
+  border-radius: 9999px;
+  width: 100%;
+  margin: 0.7rem 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: $field;
+  display: flex;
+  align-items: center;
+  border-width: 2px;
+  border-color: white;
+
+  svg {
+    color: $field-icon;
+    fill: currentColor;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  input {
+    margin-left: 0.5rem;
+    line-height: 1;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: $field-text;
+    font-weight: 600;
+    font-size: 1.125rem;
+    font-family: 'TT';
+    max-width: 100%;
+    width: 100%;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: brightness(50%)
+  }
+  //::placeholder{
+  //  text-transform: capitalize;
+  //}
+
+  .errorText {
+    position: absolute;
+    color: $error;
+    font-size: 1rem;
+    font-family: 'TT';
+    bottom: -22px;
+  }
+}
+.formGroup.error{
+  border: 2px solid $error;
+}

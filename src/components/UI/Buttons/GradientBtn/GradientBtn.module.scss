@@ -1,0 +1,59 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/animations.scss';
+.button{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Raleway;
+  text-transform: uppercase;
+  width: 9.375rem;
+  height: 3.125rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  margin: 0.625rem;
+  cursor: pointer;
+  background-image: linear-gradient(120deg, $medium-blue, $light-blue);
+  color: $text-dark;
+  transition: all 100ms ease-in-out;
+  border: 2px solid white;
+  svg{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    animation: spin 2s linear infinite;
+    color: $text-dark;
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
+  }
+}
+.button.loading.loading{
+  background-image: none;
+  border-color: $text-dark;
+  color: $text-dark;
+  svg{
+    visibility: visible;
+    color: $text-dark;
+    opacity: 1;
+  }
+  span{
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.button:focus{
+  outline: none;
+}
+.button:hover{
+  background-image: none;
+  border-color: $text-dark;
+}
+.button:disabled{
+  background-image: none;
+  border-color: $field-icon;
+  color: $field-icon;
+  svg{
+    color: $field-icon;
+  }
+}
